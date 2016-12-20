@@ -25,7 +25,6 @@ git clone https://github.com/powerline/fonts ~/.fonts
 
 # Tmux setup
 brew install tmux
-git clone https://github.com/jimeh/tmux-themepack
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # Oh-my-zsh setup
