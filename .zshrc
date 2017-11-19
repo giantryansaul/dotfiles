@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/rsaul/.oh-my-zsh
+export ZSH=/home/giantryansaul/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -97,9 +97,8 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 # Virtualenv setup
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/workspace
-export SINCEDB_PATH=$HOME/.sincedb
-export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export PATH=/home/giantryansaul/.local/bin:$PATH
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Maven setup
@@ -114,16 +113,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Postgres configuration
 export PGDATA=/usr/local/var/postgres
-
-# Docker options
-alias startdockermachine='docker-machine start'
-alias startdocker='eval "$(docker-machine env default)"'
-
-if startdocker
-then
-    startdockermachine
-    startdocker
-fi
 
 # Work setup file
 source ~/.work_setup
