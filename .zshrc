@@ -146,3 +146,5 @@ alias personalnotes='updateentry $journal_location/personal.md && vim $journal_l
     tmux new-window -c "$PWD" 2>/dev/null && exec tmux a
     exec tmux
 }
+
+cd ~
