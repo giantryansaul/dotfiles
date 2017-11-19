@@ -133,3 +133,16 @@ alias updateentry='python3 ~/personal_workspace/notebook/update_entry.py'
 journal_location=~/notebook/journal
 alias worknotes='updateentry $journal_location/work.md && vim $journal_location/work.md'
 alias personalnotes='updateentry $journal_location/personal.md && vim $journal_location/personal.md'
+
+# WSL config for Tmux
+[[ -z "$TMUX" && -n "$USE_TMUX" ]] && {
+    [[ -n "$ATTACH_ONLY" ]] && {
+        tmux a 2>/dev/null || {
+            cd && exec tmux
+        }
+        exit
+    }
+
+    tmux new-window -c "$PWD" 2>/dev/null && exec tmux a
+    exec tmux
+}
