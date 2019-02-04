@@ -98,7 +98,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 # Virtualenv setup
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-export PATH=/home/giantryansaul/.local/bin:$PATH
+export PATH=/home/$USER/.local/bin:$PATH
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Maven setup
