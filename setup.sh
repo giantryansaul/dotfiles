@@ -30,5 +30,6 @@ ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 # Oh-my-zsh setup
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ln -s ~/dotfiles/grs.zsh-theme ~/.oh-my-zsh/themes
+mv ~/.zshrc ~/.zshrc.orig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 reattach-to-user-namespace
