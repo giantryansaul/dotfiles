@@ -11,6 +11,7 @@ read -p "Press any key to continue once you've installed Java..."
 # Workspace setup
 mkdir ~/workspace 
 mkdir ~/personal
+mkdir ~/.work_setup
 brew install 
 brew install httpie jq tmux maven postgresql reattach-to-user-namespace
 

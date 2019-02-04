@@ -99,7 +99,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export PATH=/home/$USER/.local/bin:$PATH
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 # Maven setup
 #export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
