@@ -102,49 +102,42 @@ export PATH=/home/giantryansaul/.local/bin:$PATH
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Maven setup
-export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
+#export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
 #export M2_HOME=/usr/local/Cellar/maven/3.3.3
-export PATH=/usr/local/Cellar/maven/3.3.3/bin:$PATH
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$HOME/.node/bin:$PATH"
+#export PATH=/usr/local/Cellar/maven/3.3.3/bin:$PATH
+#export PATH="/usr/local/sbin:$PATH"
+#export PATH="$HOME/.node/bin:$PATH"
 
 # Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
 
 # Postgres configuration
-export PGDATA=/usr/local/var/postgres
+#export PGDATA=/usr/local/var/postgres
 
 # Work setup file
 source ~/.work_setup
 
 # MySQL settings
-export MYSQL_HOME="/usr/local/mysql"
-export PATH="$MYSQL_HOME/bin:$PATH"
+#export MYSQL_HOME="/usr/local/mysql"
+#export PATH="$MYSQL_HOME/bin:$PATH"
 
 # Knife
-export PATH=$PATH:/opt/chef/bin
+#export PATH=$PATH:/opt/chef/bin
 
 # NPM
-export PATH="$HOME/.npm-packages/bin:$PATH"
-
-# Notebook and Journal
-alias syncnotes='git -C ~/notebook add -A && git -C ~/notebook commit -m "updated" && git -C ~/notebook push'
-alias updateentry='python3 ~/personal_workspace/notebook/update_entry.py'
-journal_location=~/notebook/journal
-alias worknotes='updateentry $journal_location/work.md && vim $journal_location/work.md'
-alias personalnotes='updateentry $journal_location/personal.md && vim $journal_location/personal.md'
+#export PATH="$HOME/.npm-packages/bin:$PATH"
 
 # WSL config for Tmux
-[[ -z "$TMUX" && -n "$USE_TMUX" ]] && {
-    [[ -n "$ATTACH_ONLY" ]] && {
-        tmux a 2>/dev/null || {
-            cd && exec tmux
-        }
-        exit
-    }
-
-    tmux new-window -c "$PWD" 2>/dev/null && exec tmux a
-    exec tmux
-}
+#[[ -z "$TMUX" && -n "$USE_TMUX" ]] && {
+#    [[ -n "$ATTACH_ONLY" ]] && {
+#        tmux a 2>/dev/null || {
+#            cd && exec tmux
+#        }
+#        exit
+#    }
+#
+#    tmux new-window -c "$PWD" 2>/dev/null && exec tmux a
+#    exec tmux
+#}
 
 cd ~
