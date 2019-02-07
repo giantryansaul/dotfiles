@@ -89,12 +89,6 @@ alias mvim='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Java 7
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home
-# Java 8
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
-export PATH=$JAVA_HOME/bin:$PATH
-
 # Virtualenv setup
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
@@ -108,9 +102,6 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 #export PATH="/usr/local/sbin:$PATH"
 #export PATH="$HOME/.node/bin:$PATH"
 
-# Heroku Toolbelt
-#export PATH="/usr/local/heroku/bin:$PATH"
-
 # Postgres configuration
 #export PGDATA=/usr/local/var/postgres
 
@@ -120,9 +111,6 @@ source ~/.work_setup
 # MySQL settings
 #export MYSQL_HOME="/usr/local/mysql"
 #export PATH="$MYSQL_HOME/bin:$PATH"
-
-# Knife
-#export PATH=$PATH:/opt/chef/bin
 
 # NPM
 #export PATH="$HOME/.npm-packages/bin:$PATH"
