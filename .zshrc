@@ -51,7 +51,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git,common-aliases)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,13 +66,16 @@ export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-alias mvim='vim'
+#alias mvim='vim'
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -90,10 +93,11 @@ alias mvim='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Virtualenv setup
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export PATH=/home/$USER/.local/bin:$PATH
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Maven setup
 #export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
@@ -131,5 +135,9 @@ source ~/.work_setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+alias grep=ggrep
+
+workon mirador
 
 cd ~
