@@ -13,10 +13,15 @@ mkdir ~/workspace
 mkdir ~/personal
 mkdir ~/.work_setup
 brew install 
-brew install httpie jq tmux maven postgresql reattach-to-user-namespace
+brew install httpie jq tmux maven postgresql terraform reattach-to-user-namespace
 
 # Virtualenv
 sudo pip3 install virtualenvwrapper
+mkvirtualenv streem
+workon streem
+
+# Python install
+pip install awscli requests pre-commit
 
 # VIM install
 ln -s ~/dotfiles/.vimrc ~/.vimrc

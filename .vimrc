@@ -9,4 +9,3 @@ set nocompatible
 set backspace=indent,eol,start
 set mouse=a
 set cursorline
-set clipboard=unnamed
