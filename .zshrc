@@ -92,59 +92,39 @@ export EDITOR="$VISUAL"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Python setup
-alias python='python3'
-alias pip='pip3'
 
-# Virtualenv setup
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export PATH=/home/$USER/.local/bin:$PATH
-source /usr/local/bin/virtualenvwrapper.sh
-
-# Maven setup
-#export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
-#export M2_HOME=/usr/local/Cellar/maven/3.3.3
-#export PATH=/usr/local/Cellar/maven/3.3.3/bin:$PATH
-#export PATH="/usr/local/sbin:$PATH"
-#export PATH="$HOME/.node/bin:$PATH"
-
-# Postgres configuration
-#export PGDATA=/usr/local/var/postgres
-
-# Work setup file
 source ~/.work_setup
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# MySQL settings
-#export MYSQL_HOME="/usr/local/mysql"
-#export PATH="$MYSQL_HOME/bin:$PATH"
-
-# NPM
-#export PATH="$HOME/.npm-packages/bin:$PATH"
-
-# WSL config for Tmux
-#[[ -z "$TMUX" && -n "$USE_TMUX" ]] && {
-#    [[ -n "$ATTACH_ONLY" ]] && {
-#        tmux a 2>/dev/null || {
-#            cd && exec tmux
-#        }
-#        exit
-#    }
-#
-#    tmux new-window -c "$PWD" 2>/dev/null && exec tmux a
-#    exec tmux
-#}
+eval "$(rbenv init - zsh)"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-alias grep=ggrep
-
-workon streem
-
-cd ~
+#alias grep=ggrep
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="/opt/homebrew/bin:$PATH"
+
+export PATH=~/Library/Android/sdk/tools:$PATH
+export PATH=~/Library/Android/sdk/platform-tools:$PATH
+export PATH=~/workspace/streem-app/scripts:$PATH
+export PATH=~/workspace/node_modules/protobufjs/cli/bin:$PATH
+export JIRA_API_USER=ryan.saul@streem.com
+export JIRA_API_KEY=tbdxcVwKkLIkYeapkD3M981C
+alias mfa="aws-mfa --device $(aws iam list-mfa-devices --profile default-long-term | jq -r '.MFADevices[] | .SerialNumber')"
+alias androidscreen=scrcpy
+alias gtop='cd `git rev-parse --show-toplevel`'
+
+# export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+
+# Pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+

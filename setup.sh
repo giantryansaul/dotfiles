@@ -42,7 +42,7 @@ read -p "Press any key to continue once you've installed Java..."
 mkdir ~/workspace 
 mkdir ~/personal
 touch ~/.work_setup
-brew install lazydocker yarn httpie jq tmux maven postgresql tfenv python3 vim nvm
+brew install yarn jq tmux maven postgresql@14 tfenv python3 vim nvm pyenv
 alias python='python3'
 alias pip='pip3'
 
@@ -77,7 +77,7 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 git config --global pull.rebase true
 git config --global push.default current
 git config --global user.name "Ryan Saul"
-git config --global user.email "ryan.saul@streem.pro"
+git config --global user.email "ryan.saul@streem.com"
 
 echo "All done installing, now open iTerm.)"
 echo "Go to Prefs > General > Selection > Check 'Applications in terminal may access clipboard'"
